@@ -9,7 +9,7 @@ Requirements fuer die initiale Lieferung. Diese Anforderungen folgen der fachlic
 
 ### Foundation and Quality Gates
 
-- [ ] **FND-01**: User kann die Anwendung oeffnen und eine sichtbare Startseite sehen.
+- [x] **FND-01**: User kann die Anwendung oeffnen und eine sichtbare Startseite sehen.
 - [ ] **FND-02**: Team kann Frontend, Backend, PostgreSQL und Mail-Stub lokal starten.
 - [ ] **FND-03**: Pull Requests werden durch CI auf Build, Unit-, Integration- und E2E-Tests geprueft.
 - [ ] **FND-04**: Pull Requests werden blockiert, wenn Quality- oder Security-Checks fehlschlagen.
@@ -95,7 +95,7 @@ Explizit ausgeschlossen fuer den aktuellen Projektumfang.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FND-01 | Phase 1 | Pending |
+| FND-01 | Phase 1 | Complete |
 | FND-02 | Phase 4 | Pending |
 | FND-03 | Phase 2 | Pending |
 | FND-04 | Phase 3 | Pending |

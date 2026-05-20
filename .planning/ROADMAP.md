@@ -37,7 +37,9 @@ Decimal phases appear between their surrounding integers in numeric order.
   1. User kann die Webanwendung im Browser oeffnen und sieht eine sichtbare Startseite.
   2. User sieht auf der Startseite den Arbeitsnamen und ein grundlegendes Layout mit Navigationsplatzhaltern.
   3. Ein E2E-Basistest prueft den Startseitenaufruf erfolgreich.
-**Plans**: TBD
+**Plans**: 1 plan
+Plans:
+- [ ] 01-01-PLAN.md — Vue/Vite App-Shell mit Startseite und E2E-Basistest
 **UI hint**: yes
 
 ### Phase 2: Basis-CI

@@ -93,58 +93,56 @@ Explizit ausgeschlossen fuer den aktuellen Projektumfang.
 
 ## Traceability
 
-Wird im naechsten Schritt durch die Roadmap auf Phasen gemappt.
-
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FND-01 | TBD | Pending |
-| FND-02 | TBD | Pending |
-| FND-03 | TBD | Pending |
-| FND-04 | TBD | Pending |
-| FND-05 | TBD | Pending |
-| BLD-01 | TBD | Pending |
-| BLD-02 | TBD | Pending |
-| BLD-03 | TBD | Pending |
-| BLD-04 | TBD | Pending |
-| BLD-05 | TBD | Pending |
-| AUTH-01 | TBD | Pending |
-| AUTH-02 | TBD | Pending |
-| AUTH-03 | TBD | Pending |
-| AUTH-04 | TBD | Pending |
-| AUTH-05 | TBD | Pending |
-| AUTH-06 | TBD | Pending |
-| FLR-01 | TBD | Pending |
-| FLR-02 | TBD | Pending |
-| FLR-03 | TBD | Pending |
-| FLR-04 | TBD | Pending |
-| MRK-01 | TBD | Pending |
-| MRK-02 | TBD | Pending |
-| MRK-03 | TBD | Pending |
-| MRK-04 | TBD | Pending |
-| MRK-05 | TBD | Pending |
-| MRK-06 | TBD | Pending |
-| INV-01 | TBD | Pending |
-| INV-02 | TBD | Pending |
-| INV-03 | TBD | Pending |
-| INV-04 | TBD | Pending |
-| INV-05 | TBD | Pending |
-| INV-06 | TBD | Pending |
-| INV-07 | TBD | Pending |
-| INV-08 | TBD | Pending |
-| INV-09 | TBD | Pending |
-| INV-10 | TBD | Pending |
-| RPT-01 | TBD | Pending |
-| RPT-02 | TBD | Pending |
-| RPT-03 | TBD | Pending |
-| RPT-04 | TBD | Pending |
-| RPT-05 | TBD | Pending |
-| RPT-06 | TBD | Pending |
+| FND-01 | Phase 1 | Pending |
+| FND-02 | Phase 4 | Pending |
+| FND-03 | Phase 2 | Pending |
+| FND-04 | Phase 3 | Pending |
+| FND-05 | Phase 4 | Pending |
+| BLD-01 | Phase 5 | Pending |
+| BLD-02 | Phase 5 | Pending |
+| BLD-03 | Phase 5 | Pending |
+| BLD-04 | Phase 5 | Pending |
+| BLD-05 | Phase 5 | Pending |
+| AUTH-01 | Phase 6 | Pending |
+| AUTH-02 | Phase 6 | Pending |
+| AUTH-03 | Phase 6 | Pending |
+| AUTH-04 | Phase 6 | Pending |
+| AUTH-05 | Phase 6 | Pending |
+| AUTH-06 | Phase 6 | Pending |
+| FLR-01 | Phase 7 | Pending |
+| FLR-02 | Phase 7 | Pending |
+| FLR-03 | Phase 7 | Pending |
+| FLR-04 | Phase 7 | Pending |
+| MRK-01 | Phase 8 | Pending |
+| MRK-02 | Phase 8 | Pending |
+| MRK-03 | Phase 8 | Pending |
+| MRK-04 | Phase 9 | Pending |
+| MRK-05 | Phase 10 | Pending |
+| MRK-06 | Phase 9 | Pending |
+| INV-01 | Phase 11 | Pending |
+| INV-02 | Phase 11 | Pending |
+| INV-03 | Phase 12 | Pending |
+| INV-04 | Phase 12 | Pending |
+| INV-05 | Phase 11 | Pending |
+| INV-06 | Phase 13 | Pending |
+| INV-07 | Phase 13 | Pending |
+| INV-08 | Phase 13 | Pending |
+| INV-09 | Phase 11 | Pending |
+| INV-10 | Phase 11 | Pending |
+| RPT-01 | Phase 14 | Pending |
+| RPT-02 | Phase 14 | Pending |
+| RPT-03 | Phase 14 | Pending |
+| RPT-04 | Phase 14 | Pending |
+| RPT-05 | Phase 14 | Pending |
+| RPT-06 | Phase 14 | Pending |
 
 **Coverage:**
 - v1 requirements: 42 total
-- Mapped to phases: 0
-- Unmapped: 42
+- Mapped to phases: 42
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-05-20*
-*Last updated: 2026-05-20 after initial definition*
+*Last updated: 2026-05-20 after roadmap mapping*

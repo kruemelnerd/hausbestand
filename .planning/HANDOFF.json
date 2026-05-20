@@ -1,0 +1,52 @@
+{
+  "version": "1.0",
+  "timestamp": "2026-05-20T20:12:09.500Z",
+  "phase": "01",
+  "phase_name": "App-Skeleton",
+  "phase_dir": ".planning/phases/01-app-skeleton",
+  "plan": 1,
+  "task": 2,
+  "total_tasks": 2,
+  "status": "paused",
+  "completed_tasks": [
+    {
+      "id": 1,
+      "name": "Vue-3/Vite-App-Shell mit Startseite erstellen",
+      "status": "done",
+      "commit": "d1b63f0"
+    },
+    {
+      "id": 2,
+      "name": "Playwright-E2E-Basistest fuer Startseite integrieren",
+      "status": "done",
+      "commit": "0258e67"
+    }
+  ],
+  "remaining_tasks": [],
+  "blockers": [],
+  "human_actions_pending": [],
+  "decisions": [
+    {
+      "decision": "Roadmap folgt strikt dem fachlichen Phasenplan 1-14",
+      "rationale": "Der Phasenplan in der fachlichen Spezifikation ist fuer dieses Projekt kanonisch und darf nicht umsortiert werden.",
+      "phase": "init"
+    },
+    {
+      "decision": "Phase 1 nutzt Vue 3 + Vite + TypeScript als minimale reproduzierbare Frontend-Basis",
+      "rationale": "Ermoeglicht schnellen lokalen Start und sauberen Ausbau in Folgephasen.",
+      "phase": "01"
+    },
+    {
+      "decision": "Playwright laeuft mit mobilem Chromium-Profil und internem webServer",
+      "rationale": "Der erste E2E-Test soll mobile-first sein und lokal stabil ohne manuell gestarteten Dev-Server laufen.",
+      "phase": "01"
+    }
+  ],
+  "uncommitted_files": [
+    "AGENTS(1).md",
+    "heiz-inventur-inspec.md",
+    "heiz-inventur-technical-spec.md"
+  ],
+  "next_action": "Start with `/gsd-verify-work 1` to formally verify and close Phase 1, then continue with `/gsd-plan-phase 2`.",
+  "context_notes": "Phase 1 implementation and its single plan are complete on branch `gsd/phase-01-app-skeleton`. Build and E2E verification already passed during execution. The main remaining work is workflow-level phase verification/closure, not more implementation inside Phase 1. No servers or watchers are currently running."
+}

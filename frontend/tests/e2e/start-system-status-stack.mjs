@@ -86,4 +86,6 @@ if (!(await isHttpReady('http://127.0.0.1:4173'))) {
   await waitForHttp('http://127.0.0.1:4173')
 }
 
-await new Promise(() => {})
+await new Promise(() => {
+  setInterval(() => {}, 60_000)
+})

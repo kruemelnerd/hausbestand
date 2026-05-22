@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: verifying
-stopped_at: Completed phase 02-basis-ci execution
-last_updated: "2026-05-22T06:42:04Z"
-last_activity: 2026-05-22 -- Phase 2 execution complete
+stopped_at: Completed 03-quality-und-security-pipeline execution
+last_updated: "2026-05-22T07:41:42.674Z"
+last_activity: 2026-05-22
 progress:
   total_phases: 14
-  completed_phases: 2
-  total_plans: 3
-  completed_plans: 3
+  completed_phases: 3
+  total_plans: 5
+  completed_plans: 5
   percent: 100
 ---
 
@@ -28,7 +28,7 @@ See: .planning/PROJECT.md (updated 2026-05-20)
 Phase: 2 of 14 (Basis-CI)
 Plan: 2 of 2 in current phase
 Status: Phase complete — ready for verification
-Last activity: 2026-05-22 -- Phase 2 execution complete
+Last activity: 2026-05-22
 
 Progress: [██████████] 100%
 
@@ -54,6 +54,8 @@ Progress: [██████████] 100%
 | Phase 01 P01 | 9 | 2 tasks | 10 files |
 | Phase 02-basis-ci P01 | ~10m | 1 tasks | 6 files |
 | Phase 02-basis-ci P02 | ~15m | 1 tasks | 3 files |
+| Phase 03-quality-und-security-pipeline P01 | 2m | 2 tasks | 3 files |
+| Phase 03-quality-und-security-pipeline P02 | 2m | 2 tasks | 2 files |
 
 ## Accumulated Context
 
@@ -70,6 +72,10 @@ Recent decisions affecting current work:
 - [Phase 02-basis-ci]: Maven Wrapper statt nur System-Maven nutzen, damit CI und Lokal identisch starten.
 - [Phase 02-basis-ci]: CI laeuft in drei getrennten Jobs, damit Frontend-, Backend- und E2E-Fehler klar isoliert bleiben.
 - [Phase 02-basis-ci]: Playwright aktiviert unter CI GitHub-Annotationen und HTML-Report-Output, laesst lokal aber den mobilen Smoke-Flow unveraendert.
+- [Phase 03-quality-und-security-pipeline]: Plan 01: keep the new E2E regression limited to the existing app shell and placeholder navigation contract.
+- [Phase 03-quality-und-security-pipeline]: Plan 01: isolate dependency-review and Trivy into a read-only security workflow with fail-closed settings.
+- [Phase 03-quality-und-security-pipeline]: Plan 02: keep Renovate policy minimal with config:best-practices, no automerge, and a 7-day release-age delay.
+- [Phase 03-quality-und-security-pipeline]: Plan 02: version branch protection in the repo and apply it through gh api so required checks are reproducible.
 
 ### Pending Todos
 
@@ -81,6 +87,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-05-22T06:41:31.369Z
-Stopped at: Completed phase 02-basis-ci execution
+Last session: 2026-05-22T07:41:42.669Z
+Stopped at: Completed 03-quality-und-security-pipeline execution
 Resume file: None

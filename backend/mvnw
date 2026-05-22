@@ -1,0 +1,59 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+BASEDIR="$(cd "$(dirname "$0")" && pwd)"
+WRAPPER_PROPERTIES="$BASEDIR/.mvn/wrapper/maven-wrapper.properties"
+MAVEN_USER_HOME="${MAVEN_USER_HOME:-$HOME/.m2}"
+
+if command -v mvn >/dev/null 2>&1; then
+  exec mvn "$@"
+fi
+
+if [[ ! -f "$WRAPPER_PROPERTIES" ]]; then
+  echo "Missing Maven wrapper properties: $WRAPPER_PROPERTIES" >&2
+  exit 1
+fi
+
+DIST_URL="$(grep '^distributionUrl=' "$WRAPPER_PROPERTIES" | cut -d= -f2-)"
+if [[ -z "$DIST_URL" ]]; then
+  echo "Missing distributionUrl in $WRAPPER_PROPERTIES" >&2
+  exit 1
+fi
+
+DIST_BASENAME="${DIST_URL##*/}"
+DIST_DIR="$MAVEN_USER_HOME/wrapper/dists/apache-maven"
+INSTALL_DIR="$DIST_DIR/${DIST_BASENAME%.zip}"
+MAVEN_BIN="$INSTALL_DIR/bin/mvn"
+
+if [[ ! -x "$MAVEN_BIN" ]]; then
+  mkdir -p "$DIST_DIR" "$MAVEN_USER_HOME/wrapper/dists"
+  ARCHIVE="$MAVEN_USER_HOME/wrapper/dists/$DIST_BASENAME"
+  if [[ ! -f "$ARCHIVE" ]]; then
+    if command -v curl >/dev/null 2>&1; then
+      curl -fsSL "$DIST_URL" -o "$ARCHIVE"
+    elif command -v wget >/dev/null 2>&1; then
+      wget -q "$DIST_URL" -O "$ARCHIVE"
+    else
+      echo "curl or wget is required to download Maven" >&2
+      exit 1
+    fi
+  fi
+  rm -rf "$INSTALL_DIR"
+  mkdir -p "$INSTALL_DIR"
+  if command -v unzip >/dev/null 2>&1; then
+    TMP_DIR="$DIST_DIR/tmp-${DIST_BASENAME%.zip}"
+    rm -rf "$TMP_DIR"
+    mkdir -p "$TMP_DIR"
+    unzip -q "$ARCHIVE" -d "$TMP_DIR"
+    EXTRACTED_DIR="$(find "$TMP_DIR" -mindepth 1 -maxdepth 1 -type d | head -n 1)"
+    if [[ -n "$EXTRACTED_DIR" ]]; then
+      mv "$EXTRACTED_DIR" "$INSTALL_DIR"
+    fi
+    rm -rf "$TMP_DIR"
+  else
+    echo "unzip is required to unpack Maven" >&2
+    exit 1
+  fi
+fi
+
+exec "$MAVEN_BIN" "$@"

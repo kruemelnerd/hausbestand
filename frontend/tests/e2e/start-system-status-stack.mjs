@@ -45,6 +45,15 @@ async function waitForHttp(url, timeoutMs = 120_000) {
   throw new Error(`Timed out waiting for ${url}`)
 }
 
+async function isHttpReady(url) {
+  try {
+    const response = await fetch(url)
+    return response.ok
+  } catch {
+    return false
+  }
+}
+
 function shutdown(exitCode = 0) {
   for (const child of [frontendProcess, backendProcess]) {
     if (child && !child.killed) {
@@ -67,10 +76,14 @@ if (composeResult.status !== 0) {
   throw new Error('Docker Compose setup failed')
 }
 
-backendProcess = spawnProcess('./mvnw', ['spring-boot:run'], backendRoot)
-await waitForHttp('http://127.0.0.1:8080/actuator/health')
+if (!(await isHttpReady('http://127.0.0.1:8080/actuator/health'))) {
+  backendProcess = spawnProcess('./mvnw', ['spring-boot:run'], backendRoot)
+  await waitForHttp('http://127.0.0.1:8080/actuator/health')
+}
 
-frontendProcess = spawnProcess('npm', ['run', 'dev', '--', '--host', '127.0.0.1', '--port', '4173'], frontendRoot)
-await waitForHttp('http://127.0.0.1:4173')
+if (!(await isHttpReady('http://127.0.0.1:4173'))) {
+  frontendProcess = spawnProcess('npm', ['run', 'dev', '--', '--host', '127.0.0.1', '--port', '4173'], frontendRoot)
+  await waitForHttp('http://127.0.0.1:4173')
+}
 
 await new Promise(() => {})

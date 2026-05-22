@@ -13,7 +13,7 @@ Diese Roadmap folgt strikt dem fachlich vorgegebenen Phasenplan 1–14 aus `heiz
 Decimal phases appear between their surrounding integers in numeric order.
 
 - [ ] **Phase 1: App-Skeleton** - Sichtbare Startseite und lauffaehige Anwendungshuelle.
-- [ ] **Phase 2: Basis-CI** - Automatisierte Grundpruefung von Build und Basistests im PR.
+- [x] **Phase 2: Basis-CI** - Automatisierte Grundpruefung von Build und Basistests im PR. (completed 2026-05-22)
 - [ ] **Phase 3: Quality- und Security-Pipeline** - Verbindliche Quality/Security-Gates blockieren fehlerhafte PRs.
 - [ ] **Phase 4: Datenbasis und Migrationen** - Reproduzierbare Persistenz mit PostgreSQL, Flyway und lokalem Lauf.
 - [ ] **Phase 5: Gebaeudestruktur** - Admin verwaltet Haus-zu-Raum-Struktur, User lesen freigegebene Struktur.
@@ -203,7 +203,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. App-Skeleton | 0/0 | Not started | - |
-| 2. Basis-CI | 0/0 | Not started | - |
+| 2. Basis-CI | 2/2 | Complete   | 2026-05-22 |
 | 3. Quality- und Security-Pipeline | 0/0 | Not started | - |
 | 4. Datenbasis und Migrationen | 0/0 | Not started | - |
 | 5. Gebaeudestruktur | 0/0 | Not started | - |

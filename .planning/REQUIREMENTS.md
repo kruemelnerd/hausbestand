@@ -11,7 +11,7 @@ Requirements fuer die initiale Lieferung. Diese Anforderungen folgen der fachlic
 
 - [x] **FND-01**: User kann die Anwendung oeffnen und eine sichtbare Startseite sehen.
 - [ ] **FND-02**: Team kann Frontend, Backend, PostgreSQL und Mail-Stub lokal starten.
-- [ ] **FND-03**: Pull Requests werden durch CI auf Build, Unit-, Integration- und E2E-Tests geprueft.
+- [x] **FND-03**: Pull Requests werden durch CI auf Build, Unit-, Integration- und E2E-Tests geprueft.
 - [ ] **FND-04**: Pull Requests werden blockiert, wenn Quality- oder Security-Checks fehlschlagen.
 - [ ] **FND-05**: Persistente Daten werden ueber versionierte Migrationen reproduzierbar verwaltet.
 
@@ -97,7 +97,7 @@ Explizit ausgeschlossen fuer den aktuellen Projektumfang.
 |-------------|-------|--------|
 | FND-01 | Phase 1 | Complete |
 | FND-02 | Phase 4 | Pending |
-| FND-03 | Phase 2 | Pending |
+| FND-03 | Phase 2 | Complete |
 | FND-04 | Phase 3 | Pending |
 | FND-05 | Phase 4 | Pending |
 | BLD-01 | Phase 5 | Pending |

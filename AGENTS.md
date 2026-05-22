@@ -130,6 +130,10 @@ Use these entry points:
 - `/gsd-debug` for investigation and bug fixing
 - `/gsd-execute-phase` for planned phase work
 
+After every change, pull from GitHub and push the resulting code back to GitHub.
+
+After every successfully completed phase, create a release from the `main` branch automatically.
+
 Do not make direct repo edits outside a GSD workflow unless the user explicitly asks to bypass it.
 <!-- GSD:workflow-end -->
 

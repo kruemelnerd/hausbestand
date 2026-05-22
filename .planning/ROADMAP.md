@@ -14,7 +14,7 @@ Decimal phases appear between their surrounding integers in numeric order.
 
 - [ ] **Phase 1: App-Skeleton** - Sichtbare Startseite und lauffaehige Anwendungshuelle.
 - [x] **Phase 2: Basis-CI** - Automatisierte Grundpruefung von Build und Basistests im PR. (completed 2026-05-22)
-- [ ] **Phase 3: Quality- und Security-Pipeline** - Verbindliche Quality/Security-Gates blockieren fehlerhafte PRs.
+- [x] **Phase 3: Quality- und Security-Pipeline** - Verbindliche Quality/Security-Gates blockieren fehlerhafte PRs. (completed 2026-05-22)
 - [ ] **Phase 4: Datenbasis und Migrationen** - Reproduzierbare Persistenz mit PostgreSQL, Flyway und lokalem Lauf.
 - [ ] **Phase 5: Gebaeudestruktur** - Admin verwaltet Haus-zu-Raum-Struktur, User lesen freigegebene Struktur.
 - [ ] **Phase 6: Authentifizierung, E-Mail-Bestaetigung und Freigabe** - Nur bestaetigte und freigegebene Nutzer erhalten Zugriff.
@@ -63,7 +63,10 @@ Plans:
   1. Pull Requests werden blockiert, wenn Quality- oder Security-Checks fehlschlagen.
   2. Dependency-/Secret-/Vulnerability-Checks laufen automatisch im PR-Kontext.
   3. Renovate-Regel mit Mindestalter fuer Dependency-Updates ist wirksam konfiguriert.
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 03-01-PLAN.md — Security-Workflow, Dependency-Review-Regeln und neuer Playwright-Regressionsfall
+- [ ] 03-02-PLAN.md — Renovate-Mindestalter und Required-Checks-Branch-Protection fuer main
 
 ### Phase 4: Datenbasis und Migrationen
 **Goal**: Die Anwendung hat eine reproduzierbare, dauerhaft nutzbare lokale Datenbasis.
@@ -204,7 +207,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 →
 |-------|----------------|--------|-----------|
 | 1. App-Skeleton | 0/0 | Not started | - |
 | 2. Basis-CI | 2/2 | Complete   | 2026-05-22 |
-| 3. Quality- und Security-Pipeline | 0/0 | Not started | - |
+| 3. Quality- und Security-Pipeline | 2/2 | Complete   | 2026-05-22 |
 | 4. Datenbasis und Migrationen | 0/0 | Not started | - |
 | 5. Gebaeudestruktur | 0/0 | Not started | - |
 | 6. Authentifizierung, E-Mail-Bestaetigung und Freigabe | 0/0 | Not started | - |

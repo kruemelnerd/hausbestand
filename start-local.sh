@@ -15,7 +15,7 @@ SHUTTING_DOWN=0
 wait_for_http() {
   local url="$1"
   local name="$2"
-  local timeout_seconds="${3:-120}"
+  local timeout_seconds="${3:-300}"
   local started_at
 
   started_at="$(date +%s)"

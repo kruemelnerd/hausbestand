@@ -50,7 +50,10 @@ Plans:
   1. Bei Pull Requests laufen Frontend-/Backend-Build und vorhandene Tests automatisch.
   2. Der Startseiten-E2E-Test laeuft in CI reproduzierbar erfolgreich.
   3. Ohne gruene CI ist kein fachlicher Fortschritt freigegeben.
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 02-01-PLAN.md — Minimales Spring-Boot-Backend mit Maven-Buildvertrag aufbauen
+- [ ] 02-02-PLAN.md — GitHub-Actions-PR-CI fuer Frontend, Backend und Playwright einrichten
 
 ### Phase 3: Quality- und Security-Pipeline
 **Goal**: Qualitaet und Sicherheit sind als verpflichtende Merge-Gates aktiv.

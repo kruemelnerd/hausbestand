@@ -10,10 +10,10 @@ Requirements fuer die initiale Lieferung. Diese Anforderungen folgen der fachlic
 ### Foundation and Quality Gates
 
 - [x] **FND-01**: User kann die Anwendung oeffnen und eine sichtbare Startseite sehen.
-- [ ] **FND-02**: Team kann Frontend, Backend, PostgreSQL und Mail-Stub lokal starten.
+- [x] **FND-02**: Team kann Frontend, Backend, PostgreSQL und Mail-Stub lokal starten.
 - [x] **FND-03**: Pull Requests werden durch CI auf Build, Unit-, Integration- und E2E-Tests geprueft.
 - [x] **FND-04**: Pull Requests werden blockiert, wenn Quality- oder Security-Checks fehlschlagen.
-- [ ] **FND-05**: Persistente Daten werden ueber versionierte Migrationen reproduzierbar verwaltet.
+- [x] **FND-05**: Persistente Daten werden ueber versionierte Migrationen reproduzierbar verwaltet.
 
 ### Building Structure
 
@@ -96,10 +96,10 @@ Explizit ausgeschlossen fuer den aktuellen Projektumfang.
 | Requirement | Phase | Status |
 |-------------|-------|--------|
 | FND-01 | Phase 1 | Complete |
-| FND-02 | Phase 4 | Pending |
+| FND-02 | Phase 4 | Complete |
 | FND-03 | Phase 2 | Complete |
 | FND-04 | Phase 3 | Complete |
-| FND-05 | Phase 4 | Pending |
+| FND-05 | Phase 4 | Complete |
 | BLD-01 | Phase 5 | Pending |
 | BLD-02 | Phase 5 | Pending |
 | BLD-03 | Phase 5 | Pending |

@@ -12,3 +12,8 @@ backend/target/
 # OS and log files
 .DS_Store
 *.log
+
+.graphify/
+graphify-out/
+.graphify_*.json
+.graphify_python

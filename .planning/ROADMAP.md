@@ -76,7 +76,10 @@ Plans:
   1. Team kann Frontend, Backend, PostgreSQL und Mail-Stub lokal starten.
   2. Datenbankschema wird ueber versionierte Migrationen reproduzierbar aufgebaut.
   3. Ein E2E-Flow bestaetigt, dass Anwendung, Backend und Datenbasis gemeinsam erreichbar sind.
-**Plans**: TBD
+**Plans**: 2 plans
+Plans:
+- [ ] 04-01-PLAN.md — PostgreSQL-, Flyway- und Backend-Statusvertrag fuer die lokale Persistenzbasis aufbauen
+- [ ] 04-02-PLAN.md — Startseiten-Reachability und Phase-4-E2E fuer den Gesamtstack absichern
 
 ### Phase 5: Gebaeudestruktur
 **Goal**: Admin kann die fachliche Struktur Haus → Stockwerk → Wohnung → Raum pflegen, User koennen sie lesen.

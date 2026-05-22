@@ -3,14 +3,14 @@ gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
 status: verifying
-stopped_at: Completed 03-quality-und-security-pipeline execution
-last_updated: "2026-05-22T07:41:42.674Z"
+stopped_at: Completed 04-datenbasis-und-migrationen execution
+last_updated: "2026-05-22T10:26:40.407Z"
 last_activity: 2026-05-22
 progress:
   total_phases: 14
-  completed_phases: 3
-  total_plans: 5
-  completed_plans: 5
+  completed_phases: 4
+  total_plans: 7
+  completed_plans: 7
   percent: 100
 ---
 
@@ -56,6 +56,8 @@ Progress: [██████████] 100%
 | Phase 02-basis-ci P02 | ~15m | 1 tasks | 3 files |
 | Phase 03-quality-und-security-pipeline P01 | 2m | 2 tasks | 3 files |
 | Phase 03-quality-und-security-pipeline P02 | 2m | 2 tasks | 2 files |
+| Phase 04 P02 | 6min | 2 tasks | 6 files |
+| Phase 04 P01 | 6min | 2 tasks | 8 files |
 
 ## Accumulated Context
 
@@ -76,6 +78,11 @@ Recent decisions affecting current work:
 - [Phase 03-quality-und-security-pipeline]: Plan 01: isolate dependency-review and Trivy into a read-only security workflow with fail-closed settings.
 - [Phase 03-quality-und-security-pipeline]: Plan 02: keep Renovate policy minimal with config:best-practices, no automerge, and a 7-day release-age delay.
 - [Phase 03-quality-und-security-pipeline]: Plan 02: version branch protection in the repo and apply it through gh api so required checks are reproducible.
+- [Phase 04]: Use Docker Compose for local PostgreSQL and Mailpit with persistent storage so the phase stays offline-first and reproducible.
+- [Phase 04]: Keep the Flyway baseline technical-only with an installation probe table and no future domain tables.
+- [Phase 04]: Expose /api/system/status as a narrow application/database DTO instead of leaking actuator internals.
+- [Phase 04]: Use Testcontainers for the backend smoke test so the PostgreSQL contract is verified on every build.
+- [Phase 04]: Let Playwright bootstrap Compose plus backend and frontend so the phase-4 E2E proof is self-contained.
 
 ### Pending Todos
 
@@ -87,6 +94,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-05-22T07:41:42.669Z
-Stopped at: Completed 03-quality-und-security-pipeline execution
+Last session: 2026-05-22T10:26:40.402Z
+Stopped at: Completed 04-datenbasis-und-migrationen execution
 Resume file: None

@@ -34,6 +34,11 @@ wait_for_http() {
   done
 }
 
+is_http_ready() {
+  local url="$1"
+  curl --silent --fail "$url" >/dev/null
+}
+
 is_compose_service_running() {
   local service="$1"
   docker compose ps --status running --services 2>/dev/null | grep -Fxq "$service"
@@ -85,22 +90,26 @@ fi
 docker compose up -d --wait postgres mailpit
 
 printf 'Starting backend on http://127.0.0.1:8080 ...\n'
-(
-  cd "$BACKEND_DIR"
-  exec ./mvnw spring-boot:run
-) &
-BACKEND_PID="$!"
+if ! is_http_ready 'http://127.0.0.1:8080/actuator/health'; then
+  (
+    cd "$BACKEND_DIR"
+    exec ./mvnw spring-boot:run
+  ) &
+  BACKEND_PID="$!"
 
-wait_for_http 'http://127.0.0.1:8080/actuator/health' 'backend'
+  wait_for_http 'http://127.0.0.1:8080/actuator/health' 'backend'
+fi
 
 printf 'Starting frontend on http://127.0.0.1:4173 ...\n'
-(
-  cd "$FRONTEND_DIR"
-  exec npm run dev -- --host 127.0.0.1 --port 4173
-) &
-FRONTEND_PID="$!"
+if ! is_http_ready 'http://127.0.0.1:4173'; then
+  (
+    cd "$FRONTEND_DIR"
+    exec npm run dev -- --host 127.0.0.1 --port 4173
+  ) &
+  FRONTEND_PID="$!"
 
-wait_for_http 'http://127.0.0.1:4173' 'frontend'
+  wait_for_http 'http://127.0.0.1:4173' 'frontend'
+fi
 
 printf '\nLocal stack is ready:\n'
 printf '  Frontend: http://127.0.0.1:4173\n'

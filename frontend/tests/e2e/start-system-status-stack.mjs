@@ -58,7 +58,7 @@ function shutdown(exitCode = 0) {
 process.on('SIGINT', () => shutdown(0))
 process.on('SIGTERM', () => shutdown(0))
 
-const composeResult = spawnSync('docker', ['compose', 'up', '-d', 'postgres', 'mailpit'], {
+const composeResult = spawnSync('docker', ['compose', 'up', '-d', '--wait', 'postgres', 'mailpit'], {
   cwd: repoRoot,
   stdio: 'inherit'
 })

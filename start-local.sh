@@ -82,7 +82,7 @@ if ! is_compose_service_running mailpit; then
   STOP_MAILPIT=1
 fi
 
-docker compose up -d postgres mailpit
+docker compose up -d --wait postgres mailpit
 
 printf 'Starting backend on http://127.0.0.1:8080 ...\n'
 (

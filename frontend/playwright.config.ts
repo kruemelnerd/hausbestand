@@ -23,7 +23,7 @@ export default defineConfig({
     }
   ],
   webServer: {
-    command: 'node tests/e2e/start-system-status-stack.mjs',
+    command: '../start-local.sh',
     url: 'http://127.0.0.1:4173',
     reuseExistingServer: !process.env.CI,
     timeout: 120_000

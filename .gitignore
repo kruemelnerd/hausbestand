@@ -1,0 +1,14 @@
+# Local IDE files
+.idea/
+*.iml
+
+# Local tooling and bootstrap material
+init_modul/
+opencode.json
+
+# Build output
+backend/target/
+
+# OS and log files
+.DS_Store
+*.log

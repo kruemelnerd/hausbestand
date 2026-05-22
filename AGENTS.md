@@ -132,6 +132,8 @@ Use these entry points:
 
 After every change, pull from GitHub and push the resulting code back to GitHub.
 
+After every push, verify that the build pipeline completes successfully. If it fails, diagnose and fix the issues autonomously.
+
 After every successfully completed phase, create a release from the `main` branch automatically.
 
 Do not make direct repo edits outside a GSD workflow unless the user explicitly asks to bypass it.
